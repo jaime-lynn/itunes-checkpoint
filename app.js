@@ -21,7 +21,7 @@ function ItunesController(){
     }
 
   function drawSongs(songList){
-    console.log(songList);
+    // console.log(songList);
     // This is where you task begins
     document.getElementById('songs').innerHTML = '';
     var template = '';
