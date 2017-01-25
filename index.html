@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>iTunes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="itunes.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+</head>
+
+<body>
+    <audio id="preview" src="" type="audio/m4a">
+    </audio>
+
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name">
+                        <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                    </div>
+                </form>
+            </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Artist</th>
+                        <th>Title</th>
+                        <th>Album</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="songs">
+                    <!--<tr>
+                        <td><img src="http://placehold.it/50x50" alt="" class="thumbnail" /></td>
+                        <td>${artist}</td>
+                        <td>${title}</td>
+                        <td>${collection}</td>
+                        <td>${price}</td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="itunes-service.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>

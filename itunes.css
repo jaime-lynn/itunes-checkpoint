@@ -1,0 +1,6 @@
+body {
+    padding-top: 20px;
+    background: url(record-player.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
