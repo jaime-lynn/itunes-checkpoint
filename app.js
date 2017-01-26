@@ -29,8 +29,8 @@ function ItunesController(){
     // This is where you task begins
     var template = '';
     for(var i = 0; i < songList.length; i++) {
-        song = songList[i];
-        thumbnail = song.albumArt || 'http://placehold.it/70x70';
+        var song = songList[i];
+        var thumbnail = song.albumArt || 'http://placehold.it/70x70';
         template += `<tr>
                         <td><img src="${thumbnail}" class="thumbnail"></td>
                         <td>${song.artist}</td>
