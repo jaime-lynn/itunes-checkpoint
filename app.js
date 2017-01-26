@@ -14,8 +14,12 @@ function ItunesController(){
       for(var i = 0; i < a.length; i++){
         a[i].addEventListener('click', function(){
             var previewURL = this.getAttribute('value');
+            if(audio.getAttribute('src') == previewURL) {
+              audio.pause();
+            } else {
             audio.setAttribute('src', previewURL);
             audio.play();
+            }
         });
       }
     }
@@ -23,11 +27,10 @@ function ItunesController(){
   function drawSongs(songList){
     // console.log(songList);
     // This is where you task begins
-    document.getElementById('songs').innerHTML = '';
     var template = '';
     for(var i = 0; i < songList.length; i++) {
-        song = songList[i];
-        thumbnail = song.albumArt || 'http://placehold.it/70x70';
+        var song = songList[i];
+        var thumbnail = song.albumArt || 'http://placehold.it/70x70';
         template += `<tr>
                         <td><img src="${thumbnail}" class="thumbnail"></td>
                         <td>${song.artist}</td>
